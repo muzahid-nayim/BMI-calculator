@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <form>
+        <h1 class="text-center">BMI calculator</h1>
+        <p class="text-center">By muzahidul Islam</p>
+        <form >
+            <div class="container">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onchange="measureBMI()" >
+                    <label class="form-check-label" for="flexRadioDefault1">
+                       Matrix
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="bmi-imperial" onchange="measureBMI()"  checked>
+                    <label class="form-check-label" for="bmi-imperial">
+                        Imperial
+                    </label>
+                  </div>
+
+                <div class="mb-3">
+                    <label for="weight" class="form-label">Weight : <span id="bmi-weight-unit">(LBS)</span></label>
+                    <input type="number" class="form-control" id="weight" autofocus>
+                    
+                  </div>
+                  <div class="mb-3">
+                    
+                        <label for="feet" class="form-label" id="lf">Feet:</label>
+                    <input type="number" class="form-control" id="feet">
+                   
+                    <label for="height-inch-cm" class="form-label"><span id="bmi-height-unit">Inch</span>:</label>
+                    <input type="number" class="form-control" id="height-inch-cm">
+                  </div>
+                  <div class="mb-3 form-check">
+                    
+                  </div>
+                  <button type="submit" onclick="return  calcBMI()" class="btn btn-primary">Submit</button>
+                </form>
+                 <h1 id="bmi-results"></h1>
+            
+           
+    </form>
+    
+    <script src="app.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
